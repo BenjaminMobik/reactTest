@@ -1,4 +1,5 @@
 import Paper from 'material-ui/Paper';
+import Dates from './Dates'
 
 const style = {
   height: '88vh',
@@ -11,7 +12,9 @@ const style = {
 
 const CalendarPaper = () => (
   <div>
-    <Paper style={style} zDepth={1} />
+    <Paper style={style} >
+      <Dates />
+    </Paper>
   </div>
 );
 
