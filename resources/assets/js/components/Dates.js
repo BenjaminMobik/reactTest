@@ -1,5 +1,5 @@
 import DayPicker, { DateUtils } from "react-day-picker";
-import 'react-day-picker/lib/style.css';
+//import 'react-day-picker/lib/style.css';
 
 function sunday(day) {
   return day.getDay() === 0;

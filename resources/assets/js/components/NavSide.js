@@ -1,6 +1,14 @@
 import Paper from 'material-ui/Paper';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+import Device from 'material-ui/svg-icons/device/devices';
+import Chart from 'material-ui/svg-icons/editor/show-chart';
+import Print from 'material-ui/svg-icons/action/print';
+import Command from 'material-ui/svg-icons/communication/call-made';
+import Settings from 'material-ui/svg-icons/action/settings';
+
+
+
 import RemoveRedEye from 'material-ui/svg-icons/image/remove-red-eye';
 import PersonAdd from 'material-ui/svg-icons/social/person-add';
 import ContentLink from 'material-ui/svg-icons/content/link';
@@ -14,7 +22,7 @@ const style = {
   paper: {
     display: 'inline-block',
     float: 'right',
-    margin: '16px 0px 16px 32px',
+    margin: '30vh 0px 16px 32px',
   },
   rightIcon: {
     textAlign: 'center',
@@ -26,14 +34,13 @@ const NavSide = () => (
   <div>
     <Paper style={style.paper}>
       <Menu>
-        <MenuItem primaryText="Preview" leftIcon={<RemoveRedEye />} />
-        <MenuItem primaryText="Share" leftIcon={<PersonAdd />} />
-        <MenuItem primaryText="Get links" leftIcon={<ContentLink />} />
+        <MenuItem primaryText="Stations" leftIcon={<Device />} />
+        <MenuItem primaryText="Graphs" leftIcon={<Chart />} />
         <Divider />
-        <MenuItem primaryText="Make a copy" leftIcon={<ContentCopy />} />
-        <MenuItem primaryText="Download" leftIcon={<Download />} />
+        <MenuItem primaryText="Make a report" leftIcon={<Print />} />
+        <MenuItem primaryText="Send command" leftIcon={<Command />} />
         <Divider />
-        <MenuItem primaryText="Remove" leftIcon={<Delete />} />
+        <MenuItem primaryText="Settings" leftIcon={<Settings />} />
       </Menu>
     </Paper>
   </div>

@@ -3,7 +3,7 @@ import Dates from './Dates'
 
 const style = {
   height: '88vh',
-  width: 200,
+  // width: 200,
   margin: '16px 16px 16px 0px',
   textAlign: 'center',
   display: 'inline-block',
@@ -12,8 +12,8 @@ const style = {
 
 const CalendarPaper = () => (
   <div>
-    <Paper style={style} >
-      <Dates />
+    <Paper style={style} zDepth={1} >
+    <Dates />
     </Paper>
   </div>
 );

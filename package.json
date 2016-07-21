@@ -10,9 +10,11 @@
     "browserify": "^13.0.1",
     "gulp": "^3.9.1",
     "laravel-elixir": "^5.0.0",
+    "notify-send": "^0.1.2",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "highcharts": "^4.2.5",
     "material-ui": "^0.15.2",
     "react": "^15.2.1",
     "react-day-picker": "^2.3.3",
