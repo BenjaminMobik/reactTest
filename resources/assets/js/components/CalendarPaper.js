@@ -1,5 +1,6 @@
 import Paper from 'material-ui/Paper';
 import Dates from './Dates'
+import NavSide from './NavSide'
 
 const style = {
   height: '88vh',
@@ -14,6 +15,7 @@ const CalendarPaper = () => (
   <div>
     <Paper style={style} zDepth={1} >
     <Dates />
+    <NavSide />
     </Paper>
   </div>
 );

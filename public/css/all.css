@@ -1,19 +1,12 @@
 /* DayPicker styles */
-#chart {
-    height: 400px;
-    width: 1320px;
-    margin-top: 16px;
-    position: fixed;
-    margin-left: 300px;
+#Chart {
+  height:500px;
+  width:600px;
 }
-#chart2 {
-    height: 400px;
-    width: 1320px;
-    margin-top: 450px;
-    position: fixed;
-    margin-left: 300px;
+#highcharts-0 {
+  height:500px;
+  width:600px;
 }
-
 .DayPicker {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +96,7 @@
       .DayPicker-Day {
         display: table-cell;
         padding: .5rem;
-        border: 1px solid #eaecec;
+        border: 1px solid #eaecec00;
         text-align: center;
         cursor: pointer;
         vertical-align: middle;
@@ -144,6 +137,7 @@
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
   color: #FFF;
   background-color: #4A90E2;
+  border-radius: 50%;
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=all.css.map */

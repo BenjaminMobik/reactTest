@@ -83,3 +83,5 @@ ReactDOM.render(element2, document.getElementById('chart2'));
 // import GistBox from './components/GistBox';
 //
 // ReactDOM.render(<GistBox />, document.getElementById('app'))
+
+//# sourceMappingURL=all.js.map

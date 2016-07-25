@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8" />
     <title>React Tutorial</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css">
-    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/all.css">
 
 
   </head>

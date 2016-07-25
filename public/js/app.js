@@ -36952,10 +36952,6 @@ var _NAppBar = require('./components/NAppBar');
 
 var _NAppBar2 = _interopRequireDefault(_NAppBar);
 
-var _NavSide = require('./components/NavSide');
-
-var _NavSide2 = _interopRequireDefault(_NavSide);
-
 var _CalendarPaper = require('./components/CalendarPaper');
 
 var _CalendarPaper2 = _interopRequireDefault(_CalendarPaper);
@@ -37009,7 +37005,7 @@ var options = {
         data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
     }, {
         name: 'London',
-        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        data: [4.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
     }]
 },
     element,
@@ -37032,11 +37028,6 @@ var App = function App() {
                 null,
                 _react2.default.createElement(_CalendarPaper2.default, null)
             ),
-            _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_NavSide2.default, null)
-            ),
             _react2.default.createElement('div', { id: 'chart' }),
             _react2.default.createElement('div', { id: 'chart2' })
         )
@@ -37050,7 +37041,7 @@ _reactDom2.default.render(element2, document.getElementById('chart2'));
 //
 // ReactDOM.render(<GistBox />, document.getElementById('app'))
 
-},{"./components/CalendarPaper":430,"./components/HChart":432,"./components/NAppBar":433,"./components/NavSide":434,"material-ui/styles/MuiThemeProvider":212,"react":415,"react-dom":262,"react-tap-event-plugin":270}],430:[function(require,module,exports){
+},{"./components/CalendarPaper":430,"./components/HChart":432,"./components/NAppBar":433,"material-ui/styles/MuiThemeProvider":212,"react":415,"react-dom":262,"react-tap-event-plugin":270}],430:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37064,6 +37055,10 @@ var _Paper2 = _interopRequireDefault(_Paper);
 var _Dates = require('./Dates');
 
 var _Dates2 = _interopRequireDefault(_Dates);
+
+var _NavSide = require('./NavSide');
+
+var _NavSide2 = _interopRequireDefault(_NavSide);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37083,14 +37078,15 @@ var CalendarPaper = function CalendarPaper() {
     React.createElement(
       _Paper2.default,
       { style: style, zDepth: 1 },
-      React.createElement(_Dates2.default, null)
+      React.createElement(_Dates2.default, null),
+      React.createElement(_NavSide2.default, null)
     )
   );
 };
 
 exports.default = CalendarPaper;
 
-},{"./Dates":431,"material-ui/Paper":196}],431:[function(require,module,exports){
+},{"./Dates":431,"./NavSide":434,"material-ui/Paper":196}],431:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37219,10 +37215,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Paper = require('material-ui/Paper');
-
-var _Paper2 = _interopRequireDefault(_Paper);
-
 var _Menu = require('material-ui/Menu');
 
 var _Menu2 = _interopRequireDefault(_Menu);
@@ -37288,8 +37280,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var style = {
   paper: {
     display: 'inline-block',
-    float: 'right',
-    margin: '30vh 0px 16px 32px'
+    margin: '36px 0px 16px 32px'
   },
   rightIcon: {
     textAlign: 'center',
@@ -37302,25 +37293,21 @@ var NavSide = function NavSide() {
     'div',
     null,
     React.createElement(
-      _Paper2.default,
-      { style: style.paper },
-      React.createElement(
-        _Menu2.default,
-        null,
-        React.createElement(_MenuItem2.default, { primaryText: 'Stations', leftIcon: React.createElement(_devices2.default, null) }),
-        React.createElement(_MenuItem2.default, { primaryText: 'Graphs', leftIcon: React.createElement(_showChart2.default, null) }),
-        React.createElement(_Divider2.default, null),
-        React.createElement(_MenuItem2.default, { primaryText: 'Make a report', leftIcon: React.createElement(_print2.default, null) }),
-        React.createElement(_MenuItem2.default, { primaryText: 'Send command', leftIcon: React.createElement(_callMade2.default, null) }),
-        React.createElement(_Divider2.default, null),
-        React.createElement(_MenuItem2.default, { primaryText: 'Settings', leftIcon: React.createElement(_settings2.default, null) })
-      )
+      _Menu2.default,
+      null,
+      React.createElement(_MenuItem2.default, { primaryText: 'Stations', leftIcon: React.createElement(_devices2.default, null) }),
+      React.createElement(_MenuItem2.default, { primaryText: 'Graphs', leftIcon: React.createElement(_showChart2.default, null) }),
+      React.createElement(_Divider2.default, null),
+      React.createElement(_MenuItem2.default, { primaryText: 'Make a report', leftIcon: React.createElement(_print2.default, null) }),
+      React.createElement(_MenuItem2.default, { primaryText: 'Send command', leftIcon: React.createElement(_callMade2.default, null) }),
+      React.createElement(_Divider2.default, null),
+      React.createElement(_MenuItem2.default, { primaryText: 'Settings', leftIcon: React.createElement(_settings2.default, null) })
     )
   );
 };
 
 exports.default = NavSide;
 
-},{"material-ui/Divider":182,"material-ui/FontIcon":184,"material-ui/Menu":191,"material-ui/MenuItem":194,"material-ui/Paper":196,"material-ui/svg-icons/action/delete":220,"material-ui/svg-icons/action/print":221,"material-ui/svg-icons/action/settings":222,"material-ui/svg-icons/communication/call-made":223,"material-ui/svg-icons/content/content-copy":224,"material-ui/svg-icons/content/link":225,"material-ui/svg-icons/device/devices":226,"material-ui/svg-icons/editor/show-chart":227,"material-ui/svg-icons/file/file-download":228,"material-ui/svg-icons/image/remove-red-eye":229,"material-ui/svg-icons/social/person-add":234}]},{},[429]);
+},{"material-ui/Divider":182,"material-ui/FontIcon":184,"material-ui/Menu":191,"material-ui/MenuItem":194,"material-ui/svg-icons/action/delete":220,"material-ui/svg-icons/action/print":221,"material-ui/svg-icons/action/settings":222,"material-ui/svg-icons/communication/call-made":223,"material-ui/svg-icons/content/content-copy":224,"material-ui/svg-icons/content/link":225,"material-ui/svg-icons/device/devices":226,"material-ui/svg-icons/editor/show-chart":227,"material-ui/svg-icons/file/file-download":228,"material-ui/svg-icons/image/remove-red-eye":229,"material-ui/svg-icons/social/person-add":234}]},{},[429]);
 
 //# sourceMappingURL=app.js.map

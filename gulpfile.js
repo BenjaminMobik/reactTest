@@ -12,19 +12,18 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss')
-    mix.styles('style.css')
+    // mix.sass('app.scss')
+    mix.styles(['myStyle.css'])
     // mix.styles([
     //   'resources/assets/css/style.css'
     // ], 'public/css/app.css', './');
     mix.scripts([
-     'app.js',
-     'app2.js'
- ]);
-    mix.version('public/css/app.css');
+     'app.js'
+    ]);
     mix.browserify('app.js');
-    // mix.browserSync({
-    // proxy: 'localhost',
-    // port: '5000'
-    // });
+    mix.browserSync(
+      {
+        proxy: 'localhost:8000'
+      }
+    );
 });
